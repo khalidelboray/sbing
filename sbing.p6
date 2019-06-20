@@ -18,9 +18,11 @@ multi sub MAIN (
         for %out{'urls'}.keys -> $url {
             my $uri = URI.new($url);
             my $resolver = Net::DNS.new('8.8.8.8');
-            my @ip = $resolver.lookup-ips($uri.host, :inet)>>.&{ ~$_};
+            my $ip = ~$resolver.lookup-ips($uri.host, :inet);
             my $cname = ~$resolver.lookup( 'CNAME' , $uri.host);
-            %out{'hosts'}{$uri.host}{'ips'}.append(@ip.unique);
+            %out{'hosts'}{$uri.host}{'ips'} = [];
+            %out{'hosts'}{$uri.host}{'ips'}.push: $ip;
+            %out{'hosts'}{$uri.host}{'ips'} =  %out{'hosts'}{$uri.host}{'ips'}.unique;
             %out{'hosts'}{$uri.host}{'CNAME'} = $cname if $cname;
             %out{'hosts'}{$uri.host}{'paths'}{$uri.path} = Hash.new;
             %out{'hosts'}{$uri.host}{'paths'}{$uri.path}{'params'}.append($uri.query-form.keys) if $uri.query;
