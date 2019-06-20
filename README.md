@@ -8,6 +8,11 @@ Simple Tool Scraps Bing Search Engine for urls and some info about it
     * JSON::Fast #comes preinstalled with the latest perl6 version
     * HTTP::UserAgent #comes preinstalled with the latest perl6 version
     * URI #comes preinstalled with the latest perl6 version
+
+## Install
+  * `git clone https://github.com/khalidelboray/sbing.git`
+  * `cd sbing`
+  * see USAGE
 ## USAGE
  * run `perl6 sbing.p6 --help`
 ## USAGE Examples
