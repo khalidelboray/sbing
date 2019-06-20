@@ -3,7 +3,6 @@ use Bing;
 use JSON::Fast;
 use URI;
 use Net::DNS;
-my $sig = 
 multi sub MAIN (
     :$search , #= Querey Bing.com for urls - takes no value
     Str:D :$keyword! , #= Keyword to use as a Querey - required with --search
