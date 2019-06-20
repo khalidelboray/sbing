@@ -11,7 +11,7 @@ Simple Tool Scraps Bing Search Engine for urls and some info about it
 ## USAGE
  * run `perl6 sbing.p6 --help`
 ## USAGE Examples
-  * `perl6 --search --keyword=site:google.com --out=file-name`
+  * `perl6 sbing.p6 --search --keyword=site:google.com --out=file-name`
     * --search will start the search proccess
     * --keyword sets the query keyword
     * --out sets the output file name
@@ -19,7 +19,7 @@ Simple Tool Scraps Bing Search Engine for urls and some info about it
     
 this will output a file named file-name.txt with the urls found from bing
 
-  * `perl6 --search --keyword=site:google.com --out=file-name --json --pages=20`
+  * `perl6 sbing.p6 --search --keyword=site:google.com --out=file-name --json --pages=20`
     * --search will start the search proccess
     * --keyword sets the query keyword
     * --out sets the output file name
@@ -28,7 +28,7 @@ this will output a file named file-name.txt with the urls found from bing
     
 this will output a file named file-name.json with the urls found from bing in json format
 
-  * `perl6 --search --keyword=site:google.com --out=file-name --info --pages=20`
+  * `perl6 sbing.p6 --search --keyword=site:google.com --out=file-name --info --pages=20`
     * --search will start the search proccess
     * --keyword sets the query keyword
     * --out sets the output file name
