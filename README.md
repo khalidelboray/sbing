@@ -13,7 +13,7 @@ Simple Tool Scraps Bing Search Engine for urls and some info about it
 ## USAGE Examples
   * `perl6 --search --keyword=site:google.com --out=file-name`
     * --search will start the search proccess
-    * --keyword sets the querey keyword
+    * --keyword sets the query keyword
     * --out sets the output file name
     * defaults --pages to 10 pages
     
@@ -21,7 +21,7 @@ this will output a file named file-name.txt with the urls found from bing
 
   * `perl6 --search --keyword=site:google.com --out=file-name --json --pages=20`
     * --search will start the search proccess
-    * --keyword sets the querey keyword
+    * --keyword sets the query keyword
     * --out sets the output file name
     * --json sets the output format to json file with sarch results
     * --pages sets number of pages to scrap
@@ -30,7 +30,7 @@ this will output a file named file-name.json with the urls found from bing in js
 
   * `perl6 --search --keyword=site:google.com --out=file-name --info --pages=20`
     * --search will start the search proccess
-    * --keyword sets the querey keyword
+    * --keyword sets the query keyword
     * --out sets the output file name
     * --info gets the urls info (host,ip address,host CNAME,paths found for each host and it's params)
     * --pages sets number of pages to scrap
